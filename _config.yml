@@ -1,0 +1,10 @@
+# GitHub Pages (Jekyll) の設定。
+# theme は GitHub Pages が標準で用意しているものから選ぶ。独自 gem は使えない。
+title: らじぽけ
+description: Android 向けラジオ録音アプリ「らじぽけ」のドキュメント
+theme: jekyll-theme-minimal
+lang: ja
+
+# ドキュメント以外は公開物に含めない。
+exclude:
+  - README.md
