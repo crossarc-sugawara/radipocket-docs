@@ -7,13 +7,31 @@ GitHub Pages で公開しています: https://radipocket.github.io/docs/
 | ファイル | 公開URL |
 |---|---|
 | `privacy-policy.md` | https://radipocket.github.io/docs/privacy-policy.html |
+| `roadmap.md` | https://radipocket.github.io/docs/roadmap.html |
+| `changelog.md` | https://radipocket.github.io/docs/changelog.html |
 
 ## 更新のしかた
 
 `main` に push すると GitHub Pages が自動で再ビルドします。反映まで1〜2分かかります。
+**main への直接 push はせず、ブランチを切って PR を出すこと。**
 
 `_config.yml` は Pages（Jekyll）の設定です。テーマは GitHub Pages が標準で用意している
 ものしか使えません。
+
+## ページを増やすとき
+
+1. `<名前>.md` を置く。**先頭に front matter が要る**（これが無いと Markdown が
+   そのまま出て、見出しもテーマも効かない）。
+
+   ```
+   ---
+   title: ページの見出し
+   ---
+   ```
+
+2. `index.md` の一覧に1行足す。
+3. 上の表に1行足す。
+4. アプリからも開くなら、本体リポジトリの `AppLinks` に URL を足す。
 
 ## URL を変えないこと
 
