@@ -24,6 +24,11 @@ img[src*="images/"]{
   section th,section td{padding:5px 6px}
 }
 
+/* 表のいちばん左の列は折り返さない。変更履歴の区分が「機能追／加」と
+   2行に割れて読みにくかった。「不具合修正」でも 5文字ぶんなので、
+   狭い画面でも本文の幅を圧迫しない。 */
+section td:first-child{white-space:nowrap}
+
 /* 左ペインのメニュー。テーマにナビゲーションが無いので足す。 */
 .site-nav{
   list-style:none;
