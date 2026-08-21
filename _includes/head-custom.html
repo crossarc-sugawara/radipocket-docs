@@ -1,0 +1,48 @@
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+<style>
+/* 画面写真。テーマの img{max-width:100%} だけだと本文の幅いっぱい（500px）に
+   伸びて1枚が縦1000px を超えるので、ここで抑える。
+   GitHub Pages は Markdown の images/x.webp を /docs/images/x.webp に書き換える
+   ため、前方一致ではなく部分一致で当てる。 */
+img[src*="images/"]{
+  display:block;
+  width:100%;
+  max-width:270px;
+  height:auto;
+  aspect-ratio:720/1540;   /* 読み込み中に本文が飛ばないように場所を取っておく */
+  margin:0 auto 12px;
+  border:1px solid #e0e0e0;
+  border-radius:8px;
+}
+
+/* 料金の表は4列ある。狭い画面では折り返しても読みにくいので、
+   その場合だけ横にスクロールさせる。 */
+@media screen and (max-width: 640px){
+  section table{display:block;overflow-x:auto;white-space:nowrap}
+}
+
+/* 左ペインのメニュー。テーマにナビゲーションが無いので足す。 */
+.site-nav{
+  list-style:none;
+  padding:0;
+  margin:24px 0 0;
+  border-top:1px solid #e5e5e5;
+}
+.site-nav li{margin:0}
+.site-nav a{
+  display:block;
+  padding:8px 2px;
+  border-bottom:1px solid #e5e5e5;
+}
+.site-nav a.current{
+  font-weight:700;
+  color:#222;
+}
+.site-nav a.current:hover{color:#222}
+
+/* テーマは画面が狭くなると header ul（ダウンロード用の並び）を絶対配置に
+   飛ばす。こちらのメニューまで飛ばされると読めなくなるので、打ち消す。 */
+@media print, screen and (max-width: 960px){
+  header ul.site-nav{position:static;right:auto;top:auto}
+}
+</style>

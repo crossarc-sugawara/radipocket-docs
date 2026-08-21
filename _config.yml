@@ -8,3 +8,17 @@ lang: ja
 # ドキュメント以外は公開物に含めない。
 exclude:
   - README.md
+
+# 左ペインのメニュー。_layouts/default.html がここを読んで並べる。
+# URL は拡張子まで書く（Markdown を .html に変換して公開しているため）。
+nav:
+  - title: 紹介
+    url: /
+  - title: テスト参加
+    url: /test.html
+  - title: 開発ロードマップ
+    url: /roadmap.html
+  - title: 変更履歴
+    url: /changelog.html
+  - title: プライバシーポリシー
+    url: /privacy-policy.html
