@@ -15,10 +15,13 @@ img[src*="images/"]{
   border-radius:8px;
 }
 
-/* 料金の表は4列ある。狭い画面では折り返しても読みにくいので、
-   その場合だけ横にスクロールさせる。 */
+/* 料金の表は4列ある。狭い画面では、まず折り返して収める。
+   nowrap にすると横スクロールになり、いちばん右の「プレミアム」が
+   隠れてしまう。料金表で上位プランが見えないのは困る。
+   それでも入りきらないときのために overflow だけ残しておく。 */
 @media screen and (max-width: 640px){
-  section table{display:block;overflow-x:auto;white-space:nowrap}
+  section table{display:block;overflow-x:auto}
+  section th,section td{padding:5px 6px}
 }
 
 /* 左ペインのメニュー。テーマにナビゲーションが無いので足す。 */
