@@ -1,7 +1,10 @@
 <!--
   jekyll-theme-minimal の default レイアウトの写し。
-  変えたのは header の中にメニュー（.site-nav）を1つ足したところだけ。
-  それ以外はテーマのものと同じにしてある（見た目を変えないため）。
+  テーマと違うのは2点だけ:
+   - header の中にメニュー（.site-nav）を足した
+   - 「View the Project on GitHub」の行を外した（読み手に向けたページなので、
+     リポジトリへの導線は左ペインに要らない）
+  それ以外の行はテーマのものと同じにしてある。
 -->
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
@@ -35,14 +38,6 @@
           </li>
           {% endfor %}
         </ul>
-
-        {% if site.github.is_project_page %}
-        <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
-        {% endif %}
-
-        {% if site.github.is_user_page %}
-        <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
-        {% endif %}
 
         {% if site.show_downloads %}
         <ul class="downloads">
