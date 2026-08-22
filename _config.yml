@@ -5,6 +5,17 @@ description: Android 向けラジオ録音アプリ「らじぽけ」のドキ�
 theme: jekyll-theme-minimal
 lang: ja
 
+# SNS に貼ったときの見え方（OGP）。**絶対URLが要るので url と baseurl を明示する。**
+# GitHub Pages が自動で入れる値と同じだが、書いてあれば absolute_url の結果が読んで分かる。
+url: https://radipocket.github.io
+baseurl: /docs
+
+# og:image の既定値。ページの front matter に image があればそちらが勝つ。
+# ファイル名を英数字にしてあるのは、SNS の取得側が日本語のURLを取りこぼすことがあるため。
+og_image: /images/ogp-1200x675.png
+og_image_alt: らじぽけの画面。左から、聴く・録る・あとで聴く。
+twitter_site: "@radiopocketjp"
+
 # ドキュメント以外は公開物に含めない。
 exclude:
   - README.md
